@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register &mdash; Crestwood Public School</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="crest">CW</span>
+        <span class="brand-text">
+          <span class="brand-name">Crestwood Public School</span>
+          <span class="brand-tagline">Est. 1998 &middot; Rawalpindi</span>
+        </span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="login.html" class="btn btn-outline">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="auth-section">
+      <div class="auth-card">
+        <span class="auth-card__eyebrow">Join us</span>
+        <h1>Create an account</h1>
+
+        <p id="register-message" class="form-message" role="status"></p>
+
+        <form id="register-form" novalidate>
+          <div class="field">
+            <label for="fullName">Full name</label>
+            <input type="text" id="fullName" name="fullName" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="role">I am a</label>
+            <select id="role" name="role">
+              <option value="student">Student</option>
+              <option value="parent">Parent</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required autocomplete="new-password" minlength="6">
+          </div>
+          <div class="field">
+            <label for="confirmPassword">Confirm password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required autocomplete="new-password" minlength="6">
+          </div>
+          <button type="submit" class="btn btn-primary">Create account</button>
+        </form>
+
+        <p class="auth-switch">
+          Already have an account? <a href="login.html">Log in</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Crestwood Public School</p>
+    </div>
+  </footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

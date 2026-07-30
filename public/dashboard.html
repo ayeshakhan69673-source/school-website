@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard &mdash; Crestwood Public School</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="crest">CW</span>
+        <span class="brand-text">
+          <span class="brand-name">Crestwood Public School</span>
+          <span class="brand-tagline">Est. 1998 &middot; Rawalpindi</span>
+        </span>
+      </a>
+      <nav class="nav-links">
+        <button class="btn btn-outline logout-btn" type="button">Log out</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <div class="container">
+        <div class="dashboard-card">
+          <h1>Welcome, <span id="dashboard-name">…</span> 👋</h1>
+          <p>You're securely logged in. This page is only reachable with an active session.</p>
+          <button class="btn btn-primary logout-btn" type="button" style="max-width: 200px; margin: 0 auto;">Log out</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Crestwood Public School</p>
+    </div>
+  </footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
