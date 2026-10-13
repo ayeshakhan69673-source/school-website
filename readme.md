@@ -1,92 +1,53 @@
-# Crestwood Public School — Website
+# 🏫 School Website
 
-A multi-page school website with a home page, a notice board, and
-account registration/login backed by a real MySQL database. Built
-with Node.js, Express, and MySQL.
+A full-stack school website where users can register, log in and reach their own dashboard. The frontend is built with plain HTML, CSS and JavaScript, and the backend uses Node.js, Express and MySQL.
 
-## Tech stack
+## ✨ Features
 
-- **Frontend:** HTML, CSS, JavaScript (plain, no framework)
-- **Backend:** Node.js + Express
-- **Database:** MySQL (via `mysql2`)
-- **Auth:** Sessions (`express-session`) + password hashing (`bcrypt`)
+- Four pages: **Home, Login, Register and Dashboard**
+- Secure login with **bcrypt-protected passwords**
+- **Session-based authentication** that keeps users logged in
+- Simple API for registering, logging in, logging out and checking the current session
+- Responsive design built by hand with **CSS Grid and Flexbox** (no framework)
 
-## Pages
+## 🛠️ Tech Stack
 
-| Page              | File                  | Notes                                   |
-|-------------------|-----------------------|------------------------------------------|
-| Home              | `public/index.html`   | Hero + notice board                      |
-| Log in            | `public/login.html`   | Posts to `/api/login`                    |
-| Register          | `public/register.html`| Posts to `/api/register`                 |
-| Dashboard         | `public/dashboard.html`| **Protected** — redirects to login if no active session |
+| Area | Tools |
+|------|-------|
+| Frontend | HTML, CSS, JavaScript |
+| Backend | Node.js, Express.js |
+| Database | MySQL (mysql2) |
+| Security | bcrypt, express-session, dotenv |
+| Development | nodemon |
 
-## Setup
+## 🔌 API Routes
 
-### 1. Install dependencies
-```bash
-npm install
-```
+| Method | Route | Purpose |
+|--------|-------|---------|
+| POST | `/api/register` | Create a new account |
+| POST | `/api/login` | Log in |
+| POST | `/api/logout` | Log out |
+| GET | `/api/session` | Check who is logged in |
 
-### 2. Create the database
-Open MySQL Workbench, phpMyAdmin, or the `mysql` command line and run the script in `sql/schema.sql`:
-```bash
-mysql -u root -p < sql/schema.sql
-```
-This creates a `school_website` database with a `users` table.
+## 🚀 Run It Locally
 
-### 3. Configure environment variables
-Copy `.env.example` to `.env` and fill in your real MySQL credentials:
-```bash
-cp .env.example .env
-```
-Then edit `.env`:
-```
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
-DB_PASSWORD=your_actual_mysql_password
-DB_NAME=school_website
-SESSION_SECRET=some_long_random_string
-PORT=3000
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ayeshakhan69673-source/school-website.git
+   cd school-website
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Create a `.env` file** with your own database details and a secret key for sessions.
+4. **Start the server**
+   ```bash
+   npm start
+   ```
 
-### 4. Run the server
-```bash
-npm start
-```
-Then open **http://localhost:3000** in your browser.
+> Never upload your `.env` file to GitHub.
 
-## Testing the flow
+## 📬 Contact
 
-1. Go to **Register**, create an account (student or parent)
-2. You'll be redirected to **Log in** — sign in with the same email/password
-3. On success, you land on the **Dashboard**, which greets you by name
-4. Try opening `/dashboard.html` directly in a new private/incognito window — it should redirect you to the login page, since there's no active session there
-
-## Project structure
-
-```
-school-website/
-├── server.js              # Express app entry point
-├── config/
-│   └── db.js               # MySQL connection pool
-├── routes/
-│   └── auth.js              # /api/register, /api/login, /api/logout, /api/session
-├── sql/
-│   └── schema.sql           # Database + users table
-├── public/
-│   ├── index.html            # Home page
-│   ├── login.html
-│   ├── register.html
-│   ├── dashboard.html         # Protected page
-│   ├── css/style.css
-│   └── js/main.js              # Form handling + session/logout logic
-├── .env.example
-└── package.json
-```
-
-## Notes
-
-- Passwords are never stored in plain text — they're hashed with `bcrypt` before saving.
-- Sessions are stored in memory by default, which is fine for local development/demoing, but should be swapped for a persistent store (e.g. `connect-mysql` or Redis) in a real production deployment.
-- The school name, crest, and notices are placeholder content — swap them for your actual school's details.
+[LinkedIn](https://www.linkedin.com/in/ayesha-khan-6056992b1/) · [GitHub](https://github.com/ayeshakhan69673-source)
