@@ -50,4 +50,4 @@ A full-stack school website where users can register, log in and reach their own
 
 ## 📬 Contact
 
-[LinkedIn](https://www.linkedin.com/in/ayesha-khan-6056992b1/) · [GitHub](https://github.com/ayeshakhan69673-source)
+[LinkedIn](https://www.linkedin.com/in/ayesha-khan-dev/) · [GitHub](https://github.com/ayeshakhan69673-source)
